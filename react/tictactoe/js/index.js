@@ -50,7 +50,7 @@ class Game extends React.Component{
 class Square extends React.Component{
   render(){
       return(
-        <button className="gridbutton">
+        <button className="gridbutton" onClick={() => console.log('click')}>
           {this.props.value}
         </button>
       );
