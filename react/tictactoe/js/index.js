@@ -48,6 +48,13 @@ class Game extends React.Component{
 }
 
 class Square extends React.Component{
+  constructor(props){
+      super(props);
+      this.state = {
+        value: null,
+      };
+  }
+
   render(){
       return(
         <button className="gridbutton" onClick={() => console.log('click')}>
