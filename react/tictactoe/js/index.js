@@ -69,17 +69,12 @@ class Game extends React.Component{
   }
 }
 
-class Square extends React.Component{
-  render(){
-      return(
-        <button
-          className="gridbutton"
-          onClick={() => this.props.onClick()}
-        >
-          {this.props.value}
-        </button>
-      );
-  }
+function Square(props){
+    return (
+      <button className="gridbutton" onClick={props.onClick}>
+        {props.value}
+      </button>
+    );
 }
 
 window.onload = function(){
