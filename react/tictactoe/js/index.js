@@ -2,7 +2,7 @@
 
 class Board extends React.Component{
   renderSquare(i){
-      return <Square />;
+      return <Square value={i} />;
   }
 
   render(){
@@ -50,7 +50,9 @@ class Game extends React.Component{
 class Square extends React.Component{
   render(){
       return(
-        <button className="gridbutton"></button>
+        <button className="gridbutton">
+          {this.props.value}
+        </button>
       );
   }
 }
