@@ -57,7 +57,7 @@ class Square extends React.Component{
 
   render(){
       return(
-        <button className="gridbutton" onClick={() => console.log('click')}>
+        <button className="gridbutton" onClick={() => this.setState({value: 'X'})}>
           {this.props.value}
         </button>
       );
