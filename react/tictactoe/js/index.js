@@ -13,7 +13,7 @@ class Board extends React.Component{
       const squares = this.state.squares.slice();
 
       if(squares[i] !== '_'
-        || calculateWinner(squares)){
+        || calculateWinner(squares) !== false){
           return;
       }
 
@@ -40,7 +40,7 @@ class Board extends React.Component{
       let status;
       const winner = calculateWinner(this.state.squares);
 
-      if(winner){
+      if(winner !== false){
           status = 'Winner: ' + winner;
 
       }else{
@@ -85,13 +85,19 @@ function calculateWinner(squares){
     ];
     for(let i = 0; i < lines.length; i++){
         const [a, b, c] = lines[i];
+        if(squares[a] === '_'
+          || squares[b] === '_'
+          || squares[c] === '_'){
+            continue;
+        }
+
         if(squares[a]
           && squares[a] === squares[b]
           && squares[a] === squares[c]) {
             return squares[a];
         }
     }
-    return null;
+    return false;
 }
 
 class Game extends React.Component{
