@@ -32,9 +32,9 @@ class Board extends React.Component{
   }
 
   render(){
-      const status = 'Next player: ' + this.state.xNext
+      const status = 'Next player: ' + (this.state.xNext
         ? 'X'
-        : 'O';
+        : 'O');
 
       return (
         <div>
