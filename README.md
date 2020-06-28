@@ -1,4 +1,4 @@
 honzi/practice
 --------------
 
-https://honzi.cz/practice/index.htm
+https://honzi.github.io/practice/index.htm
